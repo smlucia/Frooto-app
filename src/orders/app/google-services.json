@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "588581398420",
+    "firebase_url": "https://frootsapp-e24c7-default-rtdb.firebaseio.com",
+    "project_id": "frootsapp-e24c7",
+    "storage_bucket": "frootsapp-e24c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588581398420:android:87cccf566ff9212d64d181",
+        "android_client_info": {
+          "package_name": "com.example.frootsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588581398420-bjaumfc6v2araqk15sb243tc59ooidup.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAExVBtMOpeMEZDOAYZ1SNiijsZEYvpqRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588581398420-bjaumfc6v2araqk15sb243tc59ooidup.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
