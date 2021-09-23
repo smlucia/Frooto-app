@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfile">
+
+
+    <RelativeLayout
+        android:id="@+id/rellay1"
+        android:layout_width="match_parent"
+        android:layout_height="269dp"
+        android:background="@color/colorPrimary"
+        android:paddingBottom="20dp">
+
+        <RelativeLayout
+            android:id="@+id/imgUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_EditprofImage"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:background="@drawable/circle"
+                android:transitionName="example_transition"
+                app:civ_border_color="#FFFF"
+                app:civ_border_width="1dp"
+                tools:ignore="MissingClass" />
+
+            <!--    <de.hdodenhof.circleimageview.CircleImageView-->
+            <!--        android:id="@+id/iv_EditprofImage"-->
+            <!--        android:layout_width="120dp"-->
+            <!--        android:layout_height="120dp"-->
+            <!--        android:layout_marginTop="9dp"-->
+            <!--        android:layout_marginEnd="9dp"-->
+            <!--        android:layout_marginBottom="9dp"-->
+            <!--        android:adjustViewBounds="true"-->
+            <!--        android:background="@drawable/circle"-->
+            <!--        android:contentDescription="profile Image"-->
+            <!--        android:padding="3dp"-->
+            <!--        android:transitionName="example_transition"/>-->
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_EditprofName"
+            android:layout_width="371dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgUser"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="31dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Oliver Twist"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+
+        <!--    android:layout_alignParentTop="true"-->
+        <!--    android:layout_alignParentRight="true"-->
+        <!--    android:layout_marginTop="20dp"-->
+        <!--    android:layout_marginRight="341dp"-->
+        <!--    android:adjustViewBounds="false"-->
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linlay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rellay1"
+        android:orientation="horizontal"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="247dp"
+        android:layout_below="@+id/linlay1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginBottom="123dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email"
+                    android:textColor="@color/headings"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_EditProfEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="olivertwist@gmail.com"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone"
+                    android:textColor="@color/headings"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_EditprofPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="+1-202-555-0157"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/grey" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btnHome"
+        android:layout_width="158dp"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-8dp"
+        android:layout_marginBottom="-8dp"
+        android:contentDescription="@string/home"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageButton
+        android:id="@+id/btnEditProfile"
+        android:layout_width="158dp"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="121dp"
+        android:layout_marginBottom="-8dp"
+        app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="158dp"
+        android:layout_height="56dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-10dp"
+        android:layout_marginBottom="-7dp"
+        app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="600dp"
+        android:layout_height="599dp"
+        app:srcCompat="@drawable/bg_wave" />
+
+
+</RelativeLayout>
+
+
+
+
+
+
