@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:id="@+id/drawerLayout"
+android:fitsSystemWindows="true"
+android:background="#F7FFFFFF"
+android:minWidth="19dp">
+
+<ScrollView
+    android:layout_width="wrap_content"
+    android:background="#F7FFFFFF"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F7FFFFFF"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F7FFFFFF"
+            app:subtitleTextColor="#0A0A0A"
+            app:titleTextColor="#111111" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Order"
+                android:textSize="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:id="@+id/orderText"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:layout_weight="100"
+                android:id="@+id/linearList"
+                android:layout_below="@+id/orderText">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/orderName"
+                    android:text="Name"
+                    android:layout_weight="10"
+                    android:textColor="#000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/orderPrice"
+                    android:textColor="#000"
+                    android:text="Price"
+                    android:layout_weight="10"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:id="@+id/orderQty"
+                    android:text="Quantity"
+                    android:layout_weight="10"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/orderAmount"
+                    android:text="Total"
+                    android:layout_weight="33.3"/>
+            </LinearLayout>
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/listView"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="70dp"
+                >
+            </ListView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/totalAmount"
+                android:layout_below="@+id/listView"
+                android:textColor="#000"
+                android:textSize="16dp"
+                android:text="Total Price"
+                android:layout_margin="16dp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/submitOrder"
+                android:layout_below="@+id/totalAmount"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="150dp"
+                android:layout_marginEnd="150dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:textColor="#fff"
+                android:text="Order" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+<com.google.android.material.navigation.NavigationView
+    android:id="@+id/navigation_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    app:headerLayout="@layout/header"
+    app:menu="@menu/drawer_menu">
+</com.google.android.material.navigation.NavigationView>
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
