@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Product"
+    android:padding="10dp"
+    android:id="@+id/orderLayout">
+
+    <ImageView
+        android:id="@+id/product_image_shop"
+        android:layout_width="422dp"
+        android:layout_height="422dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/juiceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_image_shop"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/juicePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/juiceName"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/juiceDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/juicePrice"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="16dp" />
+
+
+    <Button
+        android:id="@+id/btnDelete"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="143dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/juiceDescription"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="114dp"
+        android:layout_marginEnd="223dp"
+        android:background="@drawable/button_next"
+        android:text="@string/delete"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="143dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDelete"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-50dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/button_next"
+        android:text="@string/update"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        android:textSize="20sp" />
+
+</RelativeLayout>
