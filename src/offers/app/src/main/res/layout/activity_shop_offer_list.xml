@@ -76,7 +76,7 @@
                 android:layout_marginEnd="25dp"
                 android:layout_marginBottom="28dp"
                 android:contentDescription="@string/delete"
-                app:backgroundTint="#FF5722"
+                app:backgroundTint="#F06C93"
                 app:srcCompat="@drawable/ic_baseline_add_24" />
         </RelativeLayout>
     </RelativeLayout>
