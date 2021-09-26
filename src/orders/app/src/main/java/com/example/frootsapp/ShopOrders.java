@@ -144,6 +144,9 @@ public class ShopOrders extends AppCompatActivity {
                     case R.id.nav_Profile:
                         startActivity(new Intent(ShopOrders.this, UserProfile.class));
                         break;
+                    case R.id.nav_offers:
+                        startActivity(new Intent(ShopOrders.this, AddOfferActivity.class));
+                        break;
                     case R.id.nav_logout:
                         FirebaseAuth.getInstance().signOut();
                         Toast.makeText(ShopOrders.this, "Logged Out", Toast.LENGTH_SHORT).show();
