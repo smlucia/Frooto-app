@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="16dp"
+    android:layout_weight="100"
+    android:id="@+id/orderItem"
+    >
+
+    <TextView
+        android:id="@+id/orderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="33.3"
+        android:text="name"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/orderPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="33.3"
+        android:text="name"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/orderQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="33.3"
+        android:text="name"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/orderAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="33.3"
+        android:text="name"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/orderDelete"
+        android:layout_width="5dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="33.3"
+        android:paddingTop="7dp"
+        android:text="x"
+        android:textAllCaps="false" />
+</LinearLayout>
