@@ -47,34 +47,4 @@ public class Product extends AppCompatActivity {
             }
         });
     }
-
-//    EditText  EditProductName, EditProductPrice, EditProductDescription;
-//    ImageView EditProductImage;
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_product);
-//
-//
-//
-//        EditProductName.setText("Name: " + getIntent().getStringExtra("name"));
-//        EditProductPrice.setText("Price: " + getIntent().getStringExtra("price"));
-//        EditProductDescription.setText("Description: " + getIntent().getStringExtra("description"));
-//
-//        EditProductName = findViewById(R.id.EditProductName);
-//        EditProductPrice = findViewById(R.id.EditProductPrice);
-//        EditProductDescription = findViewById(R.id.EditProductDescription);
-//        EditProductImage = findViewById(R.id.EditProductImage);
-//
-//        EditProductImage.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(Product.this,"profile image clicked",Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//
-//
-//
-//    }
 }

@@ -30,50 +30,50 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class UpdateItem extends AppCompatActivity {
+public class UpdateOffer extends AppCompatActivity {
 
     public static final String TAG = "TAG";
-    EditText editName, editPrice, editDescription;
+    EditText editName, editPromo, editDescription;
     Button btnSave;
     private FirebaseFirestore fStore;
     private FirebaseStorage storage;
     private StorageReference storageReference;
     private Uri imageUri;
-    private ImageView editProductImage;
+    private ImageView editOfferImage;
     ProgressDialog progressDialog;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_item);
+        setContentView(R.layout.activity_update_offer);
 
         Intent data = getIntent();
-        final String name = data.getStringExtra("name");
-        String price = data.getStringExtra("price");
-        String description = data.getStringExtra("description");
+        final String name = data.getStringExtra("offername");
+        String promo = data.getStringExtra("promocode");
+        String description = data.getStringExtra("offerdescription");
 
-        editName = findViewById(R.id.txtName);
-        editPrice = findViewById(R.id.txtPrice);
-        editDescription = findViewById(R.id.txtDescription);
+        editName = findViewById(R.id.txtOffername);
+        editPromo = findViewById(R.id.txtPromocode);
+        editDescription = findViewById(R.id.txtOfferdescription);
         btnSave = findViewById(R.id.btn_save);
-        editProductImage = findViewById(R.id.EditProductImage);
+        editOfferImage = findViewById(R.id.EditOfferImage);
         progressDialog = new ProgressDialog(this);
 
         fStore = FirebaseFirestore.getInstance();
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
 
-        fStore.collection("item").document(getIntent().getStringExtra("name"))
+        fStore.collection("offer").document(getIntent().getStringExtra("offername"))
                 .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
-                com.example.frootsapp.Model.Product product = documentSnapshot.toObject(com.example.frootsapp.Model.Product.class);
-                Picasso.get().load(product.getImage()).into(editProductImage);
+                com.example.frootsapp.Model.Offer offer = documentSnapshot.toObject(com.example.frootsapp.Model.Offer.class);
+                Picasso.get().load(offer.getOfferimage()).into(editOfferImage);
             }
         });
 
-        editProductImage.setOnClickListener(new View.OnClickListener() {
+        editOfferImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openGallery();
@@ -81,10 +81,10 @@ public class UpdateItem extends AppCompatActivity {
         });
 
         editName.setText(name);
-        editPrice.setText(price);
+        editPromo.setText(promo);
         editDescription.setText(description);
 
-        Log.d(TAG, "onCreate: " + name + " " + price + " " + description + " " + imageUri);
+        Log.d(TAG, "onCreate: " + name + " " + promo + " " + description + " " + imageUri);
 
     }
 
@@ -103,15 +103,15 @@ public class UpdateItem extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (editName.getText().toString().isEmpty() || editPrice.getText().toString().isEmpty() || editDescription.getText().toString().isEmpty()) {
-                    Toast.makeText(UpdateItem.this, "one or many fields are empty", Toast.LENGTH_SHORT).show();
+                if (editName.getText().toString().isEmpty() || editPromo.getText().toString().isEmpty() || editDescription.getText().toString().isEmpty()) {
+                    Toast.makeText(UpdateOffer.this, "one or many fields are empty", Toast.LENGTH_SHORT).show();
                     return;
 
                 }
                 progressDialog.setMessage("Posting to database");
                 progressDialog.setCanceledOnTouchOutside(false);
                 progressDialog.show();
-                final StorageReference filepath = storageReference.child("product_image").child(imageUri.getLastPathSegment());
+                final StorageReference filepath = storageReference.child("offerImage").child(imageUri.getLastPathSegment());
                 filepath.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -123,19 +123,19 @@ public class UpdateItem extends AppCompatActivity {
 
                                 String Name = editName.getText().toString();
 
-                                DocumentReference docRef = fStore.collection("item").document(Name);
+                                DocumentReference docRef = fStore.collection("offer").document(Name);
 
                                 Map<String, Object> edited = new HashMap<>();
-                                edited.put("name", editName.getText().toString());
-                                edited.put("price", editPrice.getText().toString());
-                                edited.put("description", editDescription.getText().toString());
-                                edited.put("image", downloaduri.toString());
+                                edited.put("offername", editName.getText().toString());
+                                edited.put("promocode", editPromo.getText().toString());
+                                edited.put("offerdescription", editDescription.getText().toString());
+                                edited.put("offerimage", downloaduri.toString());
 
                                 docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
-                                        Toast.makeText(UpdateItem.this, "Item updated", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(getApplicationContext(), ShopProductList.class));
+                                        Toast.makeText(UpdateOffer.this, "Offer updated", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(getApplicationContext(), ShopOfferList.class));
                                         finish();
 
                                     }
@@ -162,7 +162,7 @@ public class UpdateItem extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1 && resultCode == RESULT_OK && data != null && data.getData() != null) {
             imageUri = data.getData();
-            editProductImage.setImageURI(imageUri);
+            editOfferImage.setImageURI(imageUri);
             uploadPicture();
         }
     }
@@ -173,7 +173,7 @@ public class UpdateItem extends AppCompatActivity {
         pd.show();
 
         final String randomKey = UUID.randomUUID().toString();
-        StorageReference riversRef = storageReference.child("images/" + randomKey);
+        StorageReference riversRef = storageReference.child("offerimage/" + randomKey);
 
         riversRef.putFile(imageUri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -200,5 +200,4 @@ public class UpdateItem extends AppCompatActivity {
 
                 });
     }
-   
 }

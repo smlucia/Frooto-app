@@ -30,17 +30,18 @@ android:minWidth="19dp">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="500dp">
+
             <TextView
+                android:id="@+id/orderText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Your Order"
-                android:textSize="25dp"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/bubblegum_sans"
+                android:text="Your Order"
                 android:textAlignment="center"
                 android:textColor="#000"
-                android:id="@+id/orderText"
-                />
+                android:textSize="30sp" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -48,67 +49,79 @@ android:minWidth="19dp">
                 android:layout_weight="100"
                 android:id="@+id/linearList"
                 android:layout_below="@+id/orderText">
+
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/orderName"
-                    android:text="Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="10"
-                    android:textColor="#000"/>
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/orderPrice"
-                    android:textColor="#000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
                     android:text="Price"
-                    android:layout_weight="10"/>
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
                     android:id="@+id/orderQty"
-                    android:text="Quantity"
-                    android:layout_weight="10"/>
-                <TextView
                     android:layout_width="wrap_content"
-                    android:textColor="#000"
                     android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:text="Quantity"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
                     android:id="@+id/orderAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="33.3"
                     android:text="Total"
-                    android:layout_weight="33.3"/>
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/listView"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="70dp"
-                >
-            </ListView>
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="70dp"></ListView>
+
+            <TextView
                 android:id="@+id/totalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/listView"
-                android:textColor="#000"
-                android:textSize="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
                 android:text="Total Price"
-                android:layout_margin="16dp"/>
+                android:textColor="#000"
+                android:textSize="20sp" />
 
             <Button
+                android:id="@+id/submitOrder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/submitOrder"
                 android:layout_below="@+id/totalAmount"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="150dp"
-                android:layout_marginEnd="150dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="150dp"
                 android:background="@color/colorAccent"
-                android:textColor="#fff"
-                android:text="Order" />
+                android:fontFamily="@font/bubblegum_sans"
+                android:text="ORDER"
+                android:textColor="@color/black"
+                android:textSize="28sp" />
 
         </RelativeLayout>
 
