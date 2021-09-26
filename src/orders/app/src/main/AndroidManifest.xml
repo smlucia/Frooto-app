@@ -3,6 +3,8 @@
     package="com.example.frootsapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+<!--    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="28" />-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
 
     <application
         android:allowBackup="true"
@@ -25,7 +27,12 @@
         <activity android:name=".UpdateItem" />
         <activity android:name=".Item" />
         <activity android:name=".AddItem" />
+        <activity android:name=".AddOfferActivity" />
+        <activity android:name=".ShopOffer" />
+        <activity android:name=".UpdateOffer" />
         <activity android:name=".EditUserProfile" />
+        <activity android:name=".ShopOfferList" />
+        <activity android:name=".UserOfferList" />
         <activity
             android:name=".UserProfile"
             android:configChanges="orientation|screenSize" />
