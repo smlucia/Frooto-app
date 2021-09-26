@@ -56,11 +56,11 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="7dp"
             android:layout_marginEnd="31dp"
-            android:fontFamily="sans-serif-light"
+            android:fontFamily="sans-serif-medium"
             android:text="Oliver Twist"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="28sp"
             android:textStyle="bold" />
 
@@ -110,9 +110,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
                     android:text="@string/email"
-                    android:textColor="@color/headings"
-                    android:textSize="18sp" />
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/tv_EditProfEmail"
@@ -121,7 +122,7 @@
                     android:fontFamily="sans-serif-light"
                     android:text="olivertwist@gmail.com"
                     android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:textSize="24sp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -141,9 +142,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
                     android:text="@string/phone"
-                    android:textColor="@color/headings"
-                    android:textSize="18sp" />
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
 
 
                 <TextView
@@ -153,7 +155,7 @@
                     android:fontFamily="sans-serif-light"
                     android:text="+1-202-555-0157"
                     android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:textSize="24sp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -193,7 +195,7 @@
         app:srcCompat="@drawable/ic_baseline_edit_24" />
 
     <ImageButton
-        android:id="@+id/btnDelete"
+        android:id="@+id/offerBtnDelete"
         android:layout_width="158dp"
         android:layout_height="56dp"
         android:layout_alignParentEnd="true"
