@@ -96,9 +96,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
                     android:text="Name"
-                    android:textColor="@color/headings"
-                    android:textSize="18sp" />
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/ed_EditProfName"
@@ -107,7 +109,7 @@
                     android:fontFamily="sans-serif-light"
                     android:text="Joey"
                     android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
 
             </LinearLayout>
@@ -124,9 +126,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
                     android:text="Email"
-                    android:textColor="@color/headings"
-                    android:textSize="18sp" />
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
 
                 <EditText
@@ -136,7 +140,7 @@
                     android:fontFamily="sans-serif-light"
                     android:text="Joey@gmail.com"
                     android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
 
             </LinearLayout>
@@ -152,9 +156,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
                     android:text="Phone"
-                    android:textColor="@color/headings"
-                    android:textSize="18sp" />
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/ed_editProfPhone"
@@ -163,7 +169,7 @@
                     android:fontFamily="sans-serif-light"
                     android:text="077123456"
                     android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
 
             </LinearLayout>
@@ -182,10 +188,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="170dp"
         android:layout_marginEnd="120dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="53dp"
         android:background="@drawable/button_update"
         android:text="Save"
-        android:textSize="18sp" />
+        android:textSize="28sp" />
 
     <ImageView
         android:id="@+id/imageView"
