@@ -67,5 +67,5 @@
     <string name="lblShopUpdatePhone">Contact number :</string>
     <string name="lblShopUpdateEmail">Email :</string>
     <string name="lblShopUpdateLocation">Location :</string>
-    <string name="btnShopUpdateSave">Save</string>
+    <string name="btnShopUpdateSave">SAVE</string>
 </resources>
